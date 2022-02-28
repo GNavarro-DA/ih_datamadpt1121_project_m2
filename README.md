@@ -22,17 +22,17 @@ We were asked to use the [__diamonds_m2.db__](https://github.com/ih-datapt-mad/i
 4. Export final dataset to .csv file
 5. Open the dataset with Tableau Public
 
-## ** Step 2: Exploratory Analysis**
+## **Step 2: Exploratory Analysis**
 1. Descriptive statistics with Tableau
 2. First insights of the data based on descriptive statistics
 3. Graphical representation of descriptive statistics and relations
 
-## ** Step 3: Identification of needs to develop the dashboard and development of the dashboard ** 
+## **Step 3: Identification of needs to develop the dashboard and development of the dashboard ** 
 This was the longest step. 
 
-I wanted to create a single dashboard that allows a customer to see diamonds availability based on two parameters: price (budget) and one diamond feature that the customer choices by him/herself regarding what is important to him/her. 
+__Aim:__ To create a single dashboard that allows a customer to see diamonds availability based on two parameters: one is the price (budget) and the other is a diamond feature that the customer will choice by him/herself regarding what is important to him/her (within the options: Cut, Color, Clarity). 
 
-For that reason I needed a dynamic dashboard that changes with Customer's choices and shows important data summarized in a clear visualization.
+For that reason I needed a dynamic dashboard that changes with Customer's choices and that shows important data summarized in a clear visualization.
 
 I created parameters to allow the customer to choice between some options and Calculated Fields based on those parameters. 
 
@@ -44,83 +44,27 @@ With that, I created the worksheet based on the Calculated Fields, obtaining a D
 
 A GitHub repository including:
 
-- `exploratory analysis` files that holds the results of __Challenge 1__. 
+- `SQL queries` with the queries that I used for .csv file obtantion. 
 
-- `BI Report/Dashboard` meeting the requeriments specified in __Challenge 2__.
+- `BI Report/Dashboard` meeting the requeriments specified in the project.
 
-- `README.md` file explaining the job done and your main conclusions. You may find more info of how to build a README file [here](https://github.com/potacho/data-project-template/blob/master/README.md).
-
-
-
-
-
-## **Presentation:**
-
-- __Time:__ 4 minutes sharp.
-- __Content:__ explain why your dashboard funtionalities are the best for getting meaningful data insights. Support your arguments on the conclusions obtained from the __exploratory analysis__. Conclude your pitch telling us (_in one sentence_) the most important insight (_under your criteria_) you've extracted.
-
-<p align="center"><img src="https://media.giphy.com/media/1Ygis29YXMS35cW90I/giphy.gif"></p>
-
-
-> __IMPORTANT NOTE:__ You only need your BI Report/Dashboard for the presentation (i.e.: no Jupyter, no PowerPoint/Canva)
-
-
+- `README.md` file explaining the job done and my main conclusions. 
 
 ---
 
+## **Insights and conclusions:**
 
+__During the exploratory analysis:__
+* Regarding the descriptive statistics, I assume that there are outliers in the dataset that affects the mean price of the diamonds, regarless the group category. For example in the `Descriptive Analysis` page of the Story with `Clarity` as selected criteria, the table shows a difference of +1500€ between average price and median price (in favor of average price). This difference can be explained by the presence of outliers in the dataset. 
 
-## __Challenge 1: Data Exploration and Preparation__
+* Regarding the graphical representation of the exploratory analysis, I've seen that there are two atypical conditions: 
+    1. Lower levels of Color have highest average prices. This is due to the distribution of the diamonds features that can be seen in the upper scatter plot of the `Exploratory analysis` page of the Story in which diamonds with lower level of color are shown in red. 
+    2. Lower quality of cut have almost the highest average price. In this case, the distribution does not justify this event a priori, but if we have a closer look to the lower scatter plot of the `Exploratory analysis` page of the Story, we can see that the diamond with highest price and highest carat has a 'Fair' cut. This is a real example of how outliers can affect some central tendency measurements such as average. 
 
-The goal of this challenge is to perform an __exploratory analysis__ in order to gain initial insight on our diamonds database and prepare the __data model__ that better fits your visualizations. You may use any ETL tool from those explained in class (i.e.: Pandas, PowerQuery, Tableau Public). 
+__After the project:__
 
-<p align="center"><img src="https://media.giphy.com/media/iP1qEUE7VKhLq/giphy.gif"></p>
+For me, the main conclusion that I've obtained by working with this diamonds database is that the quality of a diamond is explained by different features that are objectively measure by professionals. Some of them are more important than others. This is the case of Carats: with carats, the bigger the more expensive. But this only represents the size of the diamond, not the quality in terms of the others features. 
 
-> **IMPORTANT NOTE:** You may use any tool and/or workflow that you find more convenient in order to provide the requested output. 
+Regarding the others features of a diamond (Color, Clarity, Cut), even though they're important and objective measurements, they're not correlated. That means that a diamond with the best Cut does not have necessarily the best Color and viceversa (and the same happens with Clarity). This is the reason why establishing a real accurate price of a diamond or choose a diamond based on this features is too difficult and we usually end choosing by Carats. 
 
-
-
----
-
-
-
-## **Challenge 2: BI Report/Dashboard**
-
-BI Reports and Dashboards are powerful tools for communicating important information __at-a-glance__. The goal of this challenge is to build a BI Report/Dashboard using our diamonds database that will help the final user (i.e.: yourself) to perform better during _Module 3 project (Kaggle Competition)_. 
-
-> __Tip:__ you should first consider which data and which indicators should be put on the BI Report/Dashboard. Then, decompose the key indicators from multiple dimensions. 
-
-<p align="center"><img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif"></p>
-
-
-A BI Report/Dashboard is not exactly a sequential set of descriptive charts like those you have may built in challenge 1 during the analysis. Instead, a BI Report/Dashboard should be __a single interactive interface built around a specific objetive and which components are logically arranged in order to provide data relevant insights effectively__. Therefore, bear in mind the main objective of the competition: _understand the relationship between diamonds attributes (features) or group of attributes, and its price_.
-
-
-
----
-
-
-
-## **References:**
-
-- [SQLite](https://www.sqlite.org/index.html)
-
-- [SQLAlchemy](https://docs.sqlalchemy.org/en/14/core/engines.html)
-
-- [Visual Analysis Best Practices](https://github.com/ih-datapt-mad/ih_datamadpt1121_project_m2/blob/main/images/visual-analysis-guidebook.pdf)
-
-- [Financial Times Visual Vocabulary](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary)
-
-- [Matplotlib](https://matplotlib.org/stable/api/index)
-
-- [Pandas Visualization](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html)
-
-- [Seaborn](https://seaborn.pydata.org/api.html)
-
-- [Plotly](https://plotly.com/graphing-libraries/)
-
-- [Cufflinks](https://coderzcolumn.com/tutorials/data-science/cufflinks-how-to-create-plotly-charts-from-pandas-dataframe-with-one-line-of-code)
-
-- [Tableau](https://github.com/ih-datapt-mad/dataptmad1121_lessons/blob/main/module-2/visualization_tableau.md)
-
-- [Power BI](https://github.com/potacho/power_bi_workshop)
+This conclusion is in line with the Aim of the dashboard: to allow a customer choose based in other features, not only Carats.
