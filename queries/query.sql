@@ -1,18 +1,24 @@
+CREATE TABLE "diamonds_data" AS 
+SELECT dtrans.index_id AS "id",
+dtrans.price AS "price" ,
+dtrans.carat AS "carat",
+dcity.city AS "city",
+ddim."depth" AS "depth",
+ddim."table" AS "table",
+ddim.x AS "x",
+ddim.y AS "y",
+ddim.z AS "z",
+dcut.cut AS "cut",
+dcolor.color AS "color",
+dclar.clarity AS "clarity" 
+FROM diamonds_properties dprop
+INNER JOIN diamonds_transactional dtrans ON dprop.index_id = dtrans.index_id 
+INNER JOIN diamonds_city dcity ON dtrans.city_id = dcity.city_id
+INNER JOIN diamonds_dimensions ddim ON dprop.index_id = ddim.index_id
+INNER JOIN diamonds_cut dcut ON dprop.cut_id = dcut.cut_id 
+INNER JOIN diamonds_color dcolor ON dprop.color_id = dcolor.color_id
+INNER JOIN diamonds_clarity dclar ON dprop.clarity_id = dclar.clarity_id
 
-SELECT dpr.index_id as [Index], 
-dcl.clarity Clarity, dco.color as Color, 
-dcu.cut as Cut, 
-ddim."depth" as [Depth],
-ddim."table" as [Table],
-ddim.x as X,
-ddim.y as Y,
-ddim.z as Z,
-dtr.price as Price
-FROM diamonds_properties dpr
-INNER JOIN diamonds_clarity dcl ON dpr.clarity_id = dcl.clarity_id
-INNER JOIN diamonds_color dco ON dpr.color_id = dco.color_id
-INNER JOIN diamonds_cut dcu ON dpr.cut_id = dcu.cut_id
-INNER JOIN diamonds_dimensions ddim ON dpr.index_id = ddim.index_id
-INNER JOIN diamonds_transactional dtr ON dpr.index_id = dtr.index_id 
 
-
+SELECT*
+FROM diamonds_data dd 

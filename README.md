@@ -1,20 +1,42 @@
-<p align="left"><img src="https://cdn-images-1.medium.com/max/184/1*2GDcaeYIx_bQAZLxWM4PsQ@2x.png"></p>
+<p align="left"><img src="./images/Diamonds.jpeg"></p>
 
 # __ih_datamadpt1121_project_m2__
+## Ironhack Pawn Shop 2022
 
-![Image](https://github.com/ih-datapt-mad/ih_datamadpt1121_project_m2/blob/main/images/visuals.jpg)
+### Introduction of the project: 
+Data analytics is oftentimes referred to as business intelligence, BI development, or product analytics. However, that is just the tip of the iceberg since the data analytics process includes activities such as data formation/creation, data cleansing, exploratory data analysis (especially this part), etc. 
 
-Data analytics is oftentimes referred to as business intelligence, BI development, or product analytics. However, that is just the tip of the iceberg since the data analytics process includes activities such as data formation/creation, data cleansing, exploratory data analysis (especially this part), feature engineering, and interpretation of suggestions/predictions/results derived from advanced modelling analysis (i.e.: Machine Learning).
-
-For this project you will perform some of these activities in order to analyse the [__diamonds_m2.db__](https://github.com/ih-datapt-mad/ih_datamadpt1121_project_m2/blob/main/db/diamonds_m2.db) `SQLite` database.
-
-
-```
-conda install -c anaconda sqlite
-```
+In this case, the Second Project of Ironhack Data Analysis Part Time (Madrid) consisted in Data Visualization. 
+We were asked to use the [__diamonds_m2.db__](https://github.com/ih-datapt-mad/ih_datamadpt1121_project_m2/blob/main/db/diamonds_m2.db) `SQLite` database in order to analyse and extract all the conclusions and insights of the data. 
 
 
----
+## **Tools used in this project:** 
+
+- `DBeaver` software to make all required SQL queries in order to prepare the data model
+- `Tableau` public to analyse and construct the data model adapted to the Dashboard desired.
+
+## **Step 1: Preparation of the data** 
+1. Download of the database
+2. Use SQLite as Server in DBeaver to open the database
+3. Use DBeaver for SQL Queries
+4. Export final dataset to .csv file
+5. Open the dataset with Tableau Public
+
+## ** Step 2: Exploratory Analysis**
+1. Descriptive statistics with Tableau
+2. First insights of the data based on descriptive statistics
+3. Graphical representation of descriptive statistics and relations
+
+## ** Step 3: Identification of needs to develop the dashboard and development of the dashboard ** 
+This was the longest step. 
+
+I wanted to create a single dashboard that allows a customer to see diamonds availability based on two parameters: price (budget) and one diamond feature that the customer choices by him/herself regarding what is important to him/her. 
+
+For that reason I needed a dynamic dashboard that changes with Customer's choices and shows important data summarized in a clear visualization.
+
+I created parameters to allow the customer to choice between some options and Calculated Fields based on those parameters. 
+
+With that, I created the worksheet based on the Calculated Fields, obtaining a Dynamic dashboard that changes with Customer Decisions. 
 
 
 
@@ -29,8 +51,6 @@ A GitHub repository including:
 - `README.md` file explaining the job done and your main conclusions. You may find more info of how to build a README file [here](https://github.com/potacho/data-project-template/blob/master/README.md).
 
 
-
----
 
 
 
