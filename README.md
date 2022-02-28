@@ -27,7 +27,7 @@ We were asked to use the [__diamonds_m2.db__](https://github.com/ih-datapt-mad/i
 2. First insights of the data based on descriptive statistics
 3. Graphical representation of descriptive statistics and relations
 
-## **Step 3: Identification of needs to develop the dashboard and development of the dashboard ** 
+## **Step 3: Identification of needs to develop the dashboard and development of the dashboard** 
 This was the longest step. 
 
 __Aim:__ To create a single dashboard that allows a customer to see diamonds availability based on two parameters: one is the price (budget) and the other is a diamond feature that the customer will choice by him/herself regarding what is important to him/her (within the options: Cut, Color, Clarity). 
